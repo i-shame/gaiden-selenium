@@ -1,0 +1,513 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Selenium Tutorial - Selenium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="css\font-awesome.min.css">
+    <link rel="stylesheet" href="css\highlight.css">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\my.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <i class="fa fa-bars sidebar-toggle"></i>
+        <span class="title"><a href="tutorial.html">Selenium</a></span>
+      </div>
+      <div class="sidebar">
+        <ul>
+          <li class="unnumbered visible">
+            <a href="tutorial.html" data-alt-hash="selenium-tutorial">Selenium Tutorial</a>
+            <ul>
+              <li class="unnumbered visible"><a href="tutorial.html#selenium---ide">Selenium - IDE</a></li>
+              <li class="unnumbered visible"><a href="tutorial.html#selenium---environment-setup">Selenium - Environment Setup</a></li>
+              <li class="unnumbered visible"><a href="tutorial.html#selenium---remote-control">Selenium - Remote Control</a></li>
+              <li class="unnumbered visible">
+                <a href="tutorial.html#selenium---webdriver">Selenium - Webdriver</a>
+                <ul>
+                  <li class="unnumbered visible"><a href="tutorial.html#scripting-using-webdriver">Scripting using WebDriver</a></li>
+                  <li class="unnumbered visible"><a href="tutorial.html#most-used-commands">Most Used Commands</a></li>
+                  <li class="unnumbered visible"><a href="tutorial.html#locating-elements">Locating Elements</a></li>
+                  <li class="unnumbered visible"><a href="tutorial.html#user-interactions">User Interactions</a></li>
+                  <li class="unnumbered visible"><a href="tutorial.html#test-design-techniques">Test design techniques</a></li>
+                </ul>
+              </li>
+              <li class="unnumbered visible">
+                <a href="tutorial.html#selenium---testng">Selenium - TestNG</a>
+                <ul>
+                  <li class="unnumbered visible"><a href="tutorial.html#scripting-using-testng">Scripting Using TestNG</a></li>
+                  <li class="unnumbered visible"><a href="tutorial.html#annotations-in-testng">Annotations in TestNG</a></li>
+                </ul>
+              </li>
+              <li class="unnumbered visible">
+                <a href="tutorial.html#selenium---grid">Selenium - Grid</a>
+                <ul>
+                  <li class="unnumbered visible"><a href="tutorial.html#working-with-grid">Working with Grid</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="content-handle"></div>
+        <div class="content-container">
+          <div class="content-nav content-nav-top">
+          </div>
+          <div class="main-content">
+            <h1 id="selenium-tutorial">Selenium Tutorial</h1>
+            <blockquote>
+              <p>Selenium is an open-source and a portable automated software testing tool for testing web applications. It has capabilities to operate across different browsers and operating systems. Selenium is not just a single tool but a set of tools that helps testers to automate web-based applications more efficiently.</p>
+            </blockquote>
+            <p>Let us now understand each one of the tools available in the Selenium suite and their usage.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">Tool </th>
+                  <th align="left">Description </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">Selenium <strong>IDE</strong> </td>
+                  <td align="left">Selenium <strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment (IDE) is a <strong>Firefox</strong> plugin that lets testers to record their actions as they follow the workflow that they need to test. </td>
+                </tr>
+                <tr>
+                  <td align="center">Selenium <strong>RC</strong> </td>
+                  <td align="left">Selenium <strong>R</strong>emote <strong>C</strong>ontrol (RC) was the flagship testing framework that allowed more than simple <strong>browser actions</strong> and <strong>linear execution</strong>. It makes use of the full power of programming languages such as <strong>Java</strong>, <strong>C#</strong>, <strong>PHP</strong>, <strong>Python</strong>, <strong>Ruby</strong> and <strong>PERL</strong> to create more complex tests. </td>
+                </tr>
+                <tr>
+                  <td align="center">Selenium <strong>WebDriver</strong> </td>
+                  <td align="left">Selenium <strong>WebDriver</strong> is the successor to Selenium RC which sends commands directly to the browser and retrieves results. </td>
+                </tr>
+                <tr>
+                  <td align="center">Selenium <strong>Grid</strong> </td>
+                  <td align="left">Selenium <strong>Grid</strong> is a tool used to <strong>run parallel tests across different machines and different browsers simultaneously</strong> which results in minimized execution time. </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="selenium---ide">Selenium - IDE</h2>
+            <ul>
+              <li>The Selenium-IDE (Integrated Development Environment) is an easy-to-use Firefox plug-in to develop Selenium test cases. It provides a Graphical User Interface for recording user actions using Firefox which is used to learn and use Selenium, but it can only be used with Firefox browser as other browsers are not supported.</li>
+              <li>Launch Firefox and navigate to the following URL - <a href="http://seleniumhq.org/download/" title="http://seleniumhq.org/download/">http://seleniumhq.org/download/</a>. Under the Selenium IDE section, click on the link then Install <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/" title="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/">Selenium IDE – Add-ons for Firefox</a> <img src="images\2018-03-27_10-50-25.png" alt="2018-03-27_10-50-25"/></li>
+            </ul>
+            <p>The Selenium IDE can now be accessed by navigating <img src="images\2018-03-27_10-52-58.png" alt="2018-03-27_10-52-58"/></p>
+            <h2 id="selenium---environment-setup">Selenium - Environment Setup</h2>
+            <p>In order to <strong>develop Selenium RC or WebDriver scripts</strong>, users have to ensure that they have the <strong>initial configuration</strong> done. Setting up the environment involves the following steps.</p>
+            <ul>
+              <li><strong>Download and Install Java</strong>: We need to have JDK (Java Development Kit) installed in order to work with Selenium WebDriver/Selenium. Let download, install and config JAVA_HOME <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" title="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">jdk8-downloads</a></li>
+              <li><strong>Download and Configure Eclipse</strong>: Navigate to <a href="https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3" title="https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3">Eclipse IDE for Java EE Developers</a> and download the appropriate file based on your OS architecture</li>
+              <li><strong>Download and Configure Selenium RC, Selenium WebDriver</strong>: Navigate to the <a href="http://selenium-release.storage.googleapis.com/index.html" title="http://selenium-release.storage.googleapis.com/index.html">selenium downloads of all the Selenium components</a> and download latest releases file based on your OS architecture <img src="images\2018-03-27_11-16-16.png" alt="2018-03-27_11-16-16"/></li>
+            </ul>
+            <h2 id="selenium---remote-control">Selenium - Remote Control</h2>
+            <pre><code class="nohighlight">Since Selenium 3.x, Selenium RC is Officially Dead – Long Live WebDriver
+</code></pre>
+            <p><a href="https://www.joecolantonio.com/2016/10/13/selenium-3-now-officially-available/" title="https://www.joecolantonio.com/2016/10/13/selenium-3-now-officially-available/">selenium-3-now-officially-available</a></p>
+            <p><a href="https://techbeacon.com/selenium-30-release-testers-say-buh-bye-selenium-rc" title="https://techbeacon.com/selenium-30-release-testers-say-buh-bye-selenium-rc">selenium-30-release-testers-say-buh-bye-selenium-rc</a></p>
+            <ul>
+              <li>Selenium <strong>R</strong>emote <strong>C</strong>ontrol (RC) was the main Selenium project that sustained for a long time before Selenium <strong>WebDriver</strong>(Selenium <strong>2.0</strong>) came into existence. <strong>Selenium RC</strong> is <strong>hardly in use</strong>, as <strong>WebDriver</strong> offers <strong>more powerful features</strong>.</li>
+            </ul>
+            <h2 id="selenium---webdriver">Selenium - Webdriver</h2>
+            <p><strong>WebDriver</strong> is a tool for automating testing web applications. It is popularly known as <strong>Selenium 2.0</strong>. <strong>WebDriver</strong> uses a different underlying framework, while Selenium RC uses JavaScript Selenium-Core embedded within the browser which has got some limitations. <strong>WebDriver</strong> interacts directly with the browser without any intermediary, unlike Selenium RC that depends on a server. It is used in the following context −</p>
+            <ul>
+              <li><strong>Multi-browser testing</strong> including improved functionality for browsers which is not well-supported by Selenium RC (Selenium 1.0).</li>
+              <li>Handling multiple <strong>frames</strong>, multiple <strong>browser windows</strong>, <strong>popups</strong>, and <strong>alerts</strong>.</li>
+              <li>Complex page <strong>navigation</strong>.</li>
+              <li>Advanced user navigation such as <strong>drag-and-drop</strong>.</li>
+              <li><strong>AJAX-based</strong> UI elements.</li>
+            </ul>
+            <p><img src="images\selenium_ide_92.jpg" alt="Selenium Webdriver Architecture"/></p>
+            <h3 id="scripting-using-webdriver">Scripting using WebDriver</h3>
+            <p>The way to write a sample script using WebDriver</p>
+            <ul>
+              <li>Download the driver based on the type of your OS, unzip the exe file and place it in a folder which has to be referred <img src="images\2018-03-27_14-33-33.png" alt="2018-03-27_14-33-33"/></li>
+              <li>Add reference to all the JAR&rsquo;s of Selenium WebDriver Library folder to <strong>Configure Build Path</strong> <img src="images\2018-03-27_14-15-04.png" alt="2018-03-27_14-15-04"/></li>
+              <li>Now it is time for coding. Let&rsquo;s execute the following code by clicking <strong>Run</strong> (**Ctrl+F11**). The output of the above script would be printed in Console.</li>
+            </ul>
+            <pre><code class="nohighlight">package sel;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WebDriverDemo {
+	public static void main(String[] args) {
+		System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;C:\\lab\\dev\\drivers\\geckodriver.exe&quot;);
+		WebDriver driver = new FirefoxDriver();
+		// Puts an Implicit wait, Will wait for 10 seconds before throwing exception
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		// Launch website
+		driver.navigate().to(&quot;http://www.calc-site.com/&quot;);
+
+		// Maximize the browser
+		driver.manage().window().maximize();
+
+		// Enter value in the calc_display
+		driver.findElement(By.id(&quot;calc_display&quot;)).sendKeys(&quot;12*34&quot;);
+
+		// Click on button equal
+		driver.findElement(By.xpath(&quot;//*[@id=&#39;calculator&#39;]/div[2]/table/tbody/tr[5]/td[3]/input&quot;)).click();
+
+		// Get the Result Text based on its xpath
+		String result = driver.findElement(By.xpath(&quot;//*[@id=&#39;calc_display&#39;]&quot;)).getAttribute(&quot;value&quot;);
+
+		// Print a Log In message to the screen
+		System.out.println(&quot; The Result is &quot; + result);
+
+		// Close the Browser.
+		driver.close();
+	}
+}
+
+</code></pre>
+            <h3 id="most-used-commands">Most Used Commands</h3>
+            <p><em>The following table lists some of the most frequently used commands in WebDriver along with their syntax.</em></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Command </th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>driver.get(&ldquo;URL&rdquo;) </td>
+                  <td> To navigate to an application.</td>
+                </tr>
+                <tr>
+                  <td>element.sendKeys(&ldquo;inputtext&rdquo;) </td>
+                  <td> Enter some text into an input box.</td>
+                </tr>
+                <tr>
+                  <td>element.clear() </td>
+                  <td> Clear the contents from the input box.</td>
+                </tr>
+                <tr>
+                  <td>select.deselectAll() </td>
+                  <td> Deselect all OPTIONs from the first SELECT on the page.</td>
+                </tr>
+                <tr>
+                  <td>select.selectByVisibleText(&ldquo;some text&rdquo;) </td>
+                  <td> Select the OPTION with the input specified by the user.</td>
+                </tr>
+                <tr>
+                  <td>driver.switchTo().window(&ldquo;windowName&rdquo;) </td>
+                  <td> Move the focus from one window to another.</td>
+                </tr>
+                <tr>
+                  <td>driver.switchTo().frame(&ldquo;frameName&rdquo;) </td>
+                  <td> Swing from frame to frame.</td>
+                </tr>
+                <tr>
+                  <td>driver.switchTo().alert() </td>
+                  <td> Helps in handling alerts.</td>
+                </tr>
+                <tr>
+                  <td>driver.navigate().to(&ldquo;URL&rdquo;) </td>
+                  <td> Navigate to the URL.</td>
+                </tr>
+                <tr>
+                  <td>driver.navigate().forward() </td>
+                  <td> To navigate forward.</td>
+                </tr>
+                <tr>
+                  <td>driver.navigate().back() </td>
+                  <td> To navigate back.</td>
+                </tr>
+                <tr>
+                  <td>driver.close() </td>
+                  <td> Closes the current browser associated with the driver.</td>
+                </tr>
+                <tr>
+                  <td>driver.quit() </td>
+                  <td> Quits the driver and closes all the associated window of that driver.</td>
+                </tr>
+                <tr>
+                  <td>driver.refresh() </td>
+                  <td> Refreshes the current page.</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="locating-elements">Locating Elements</h3>
+            <p><em>The following table lists all the Java syntax for locating elements in Selenium WebDriver.</em></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Syntax </th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    driver.findElement(By.id (
+                    <element ID>
+                    )) 
+                  </td>
+                  <td>Locates an element using the ID attribute</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.name (
+                    <element name>
+                    )) 
+                  </td>
+                  <td>Locates an element using the Name attribute</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.className (
+                    <element class>
+                    )) 
+                  </td>
+                  <td>Locates an element using the Class attribute</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.tagName (
+                    <htmltagname>
+                    )) 
+                  </td>
+                  <td>Locates an element using the HTML tag</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.linkText (
+                    <linktext>
+                    )) 
+                  </td>
+                  <td>Locates a link using link text</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.partialLinkText (
+                    <linktext>
+                    )) 
+                  </td>
+                  <td>Locates a link using the link&rsquo;s partial text</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.cssSelector (
+                    <css selector>
+                    )) 
+                  </td>
+                  <td>Locates an element using the CSS selector</td>
+                </tr>
+                <tr>
+                  <td>
+                    driver.findElement(By.xpath (
+                    <xpath>
+                    )) 
+                  </td>
+                  <td>Locates an element using XPath query</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="user-interactions">User Interactions</h3>
+            <p><em>Listed below are the different kinds of actions against those GUI objects −</em></p>
+            <ul>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_textbox.htm">Text Box Interaction</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_radio_button.htm">Radio Button Selection</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_check_box.htm">Check Box Selection</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_drop_down.htm">Drop Down Item Selection</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_synchronization.htm">Synchronization</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_drag_drop.htm">Drag &amp; Drop</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_keyboard_actions.htm">Keyboard Actions</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_mouse_actions.htm">Mouse Actions</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_multi_select.htm">Multi Select</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_find_all_links.htm">Find All Links</a></li>
+            </ul>
+            <h3 id="test-design-techniques">Test design techniques</h3>
+            <p><em>There are various components involved in designing the tests</em></p>
+            <ul>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_page_object_model.htm">Page Object Model</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_parameterizing_using_excel.htm">Parameterizing using Excel</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_log4j_logging.htm">Log4j Logging</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_exception_handling.htm">Exception Handling</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_multi_browser_testing.htm">Multi Browser Testing</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_capture_screenshots.htm">Capture Screenshots</a></li>
+              <li><a href="https://www.tutorialspoint.com//selenium/selenium_capture_video.htm">Capture Videos</a></li>
+            </ul>
+            <h2 id="selenium---testng">Selenium - TestNG</h2>
+            <p><em>TestNG is a powerful testing framework, an enhanced version of JUnit which was in use for a long time before TestNG came into existence. NG stands for &lsquo;Next Generation&rsquo;.</em></p>
+            <ul>
+              <li><strong>Installing TestNG for Eclipse</strong> : Launch Eclipse and select &lsquo;Install New Software&rsquo;. Enter the URL as &rsquo;**<a href="http://beust.com/eclipse**">http://beust.com/eclipse**</a>&rsquo; and install <strong>TestNG</strong> <img src="images\2018-03-27_15-27-09.png" alt="2018-03-27_15-27-09.png"/></li>
+            </ul>
+            <h3 id="scripting-using-testng">Scripting Using TestNG</h3>
+            <ul>
+              <li>Launch Eclipse and create a &lsquo;New Java Project&rsquo; with &lsquo;TestNG&rsquo; Library <img src="images\2018-03-27_15-43-10.png" alt="2018-03-27_15-43-10"/></li>
+              <li>Then, time for coding. Let&rsquo;s execute the following code by right click on the created XML and select &ldquo;Run As&rdquo; &gt;&gt; &ldquo;TestNG Suite&rdquo;</li>
+            </ul>
+            <p><code>testng.FirstTest.java</code></p>
+            <pre><code class="nohighlight">package testng;
+
+import static org.testng.Assert.assertEquals;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class FirstTest {
+	WebDriver driver;
+
+	@Test
+	public void f() {
+		// Enter value in the calc_display
+		driver.findElement(By.id(&quot;calc_display&quot;)).sendKeys(&quot;12*34&quot;);
+		// Click on button equal
+		driver.findElement(By.xpath(&quot;//*[@id=&#39;calculator&#39;]/div[2]/table/tbody/tr[5]/td[3]/input&quot;)).click();
+		// Get the Result Text based on its xpath
+		String result = driver.findElement(By.xpath(&quot;//*[@id=&#39;calc_display&#39;]&quot;)).getAttribute(&quot;value&quot;);
+
+		assertEquals(result, &quot;408&quot;);
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+		System.setProperty(&quot;webdriver.gecko.driver&quot;, &quot;C:\\lab\\dev\\drivers\\geckodriver.exe&quot;);
+		driver = new FirefoxDriver();
+		// Puts an Implicit wait, Will wait for 10 seconds before throwing exception
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		// Launch website
+		driver.navigate().to(&quot;http://www.calc-site.com/&quot;);
+		driver.manage().window().maximize();
+	}
+
+	@AfterTest
+	public void afterTest() {
+		// Close the Browser.
+		driver.close();
+	}
+
+}
+</code></pre>
+            <p><code>test.xml</code></p>
+            <pre><code class="nohighlight">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;suite name=&quot;Suite&quot; parallel=&quot;false&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testng.FirstTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt;
+&lt;/suite&gt;
+</code></pre>
+            <ul>
+              <li>The result of TestNG can also be seen in a this tab</li>
+            </ul>
+            <p><img src="images\2018-03-27_15-52-53.png" alt="2018-03-27_15-52-53"/></p>
+            <h3 id="annotations-in-testng">Annotations in TestNG</h3>
+            <p><em>Following are some of the benefits of using annotations. More about TestNG can be found <a href="https://www.tutorialspoint.com/testng/index.htm">here</a></em></p>
+            <table>
+              <thead>
+                <tr>
+                  <th align="left">Annotation </th>
+                  <th align="left">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left">@BeforeSuite </td>
+                  <td align="left"> The annotated method will be run only once before all the tests in this suite have run.</td>
+                </tr>
+                <tr>
+                  <td align="left">@AfterSuite </td>
+                  <td align="left"> The annotated method will be run only once after all the tests in this suite have run.</td>
+                </tr>
+                <tr>
+                  <td align="left">@BeforeClass </td>
+                  <td align="left"> The annotated method will be run only once before the first test method in the current class is invoked.</td>
+                </tr>
+                <tr>
+                  <td align="left">@AfterClass </td>
+                  <td align="left"> The annotated method will be run only once after all the test methods in the current class have run.</td>
+                </tr>
+                <tr>
+                  <td align="left">@BeforeTest </td>
+                  <td align="left">
+                     The annotated method will be run before any test method belonging to the classes inside the 
+                    <test>
+                    tag is run.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">@AfterTest </td>
+                  <td align="left">
+                     The annotated method will be run after all the test methods belonging to the classes inside the 
+                    <test>
+                    tag have run.
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">@BeforeGroups </td>
+                  <td align="left"> The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.</td>
+                </tr>
+                <tr>
+                  <td align="left">@AfterGroups </td>
+                  <td align="left"> The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked.</td>
+                </tr>
+                <tr>
+                  <td align="left">@BeforeMethod </td>
+                  <td align="left"> The annotated method will be run before each test method.</td>
+                </tr>
+                <tr>
+                  <td align="left">@AfterMethod </td>
+                  <td align="left"> The annotated method will be run after each test method.</td>
+                </tr>
+                <tr>
+                  <td align="left">@DataProvider </td>
+                  <td align="left"> Marks a method as supplying data for a test method. The annotated method must return an Object[ ][ ] where each Object[ ] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.</td>
+                </tr>
+                <tr>
+                  <td align="left">@Factory </td>
+                  <td align="left"> Marks a method as a factory that returns objects that will be used by TestNG as Test classes. The method must return Object[ ].</td>
+                </tr>
+                <tr>
+                  <td align="left">@Listeners </td>
+                  <td align="left"> Defines listeners on a test class.</td>
+                </tr>
+                <tr>
+                  <td align="left">@Parameters </td>
+                  <td align="left"> Describes how to pass parameters to a @Test method.</td>
+                </tr>
+                <tr>
+                  <td align="left">@Test </td>
+                  <td align="left"> Marks a class or a method as part of the test.</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="selenium---grid">Selenium - Grid</h2>
+            <p><em>Selenium Grid is a tool that distributes the tests across multiple physical or virtual machines so that we can execute scripts in parallel (simultaneously)</em></p>
+            <p>Selenium Grid has a Hub and a Node.</p>
+            <ul>
+              <li><strong>Hub</strong> − The hub can also be understood as a server which acts as the central point where the tests would be triggered. A Selenium Grid has only one Hub and it is launched on a single machine once.</li>
+              <li><strong>Node</strong> − Nodes are the Selenium instances that are attached to the Hub which execute the tests. There can be one or more nodes in a grid which can be of any OS and can contain any of the Selenium supported browsers.</li>
+            </ul>
+            <p><img src="images\selenium_ide_121.jpg" alt="Grid Architecture"/></p>
+            <h3 id="working-with-grid">Working with Grid</h3>
+            <p><code>updating...</code></p>
+          </div>
+          <div class="content-nav content-nav-bottom">
+          </div>
+          <div class="footer">
+            <p class="version text-muted">Version 0.1</p>
+            <p class="credit text-muted">Powered by <a href="https://github.com/kobo/gaiden">Gaiden</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js\jquery-2.1.1.min.js"></script>
+    <script src="js\highlight.js"></script>
+    <script src="js\application.js"></script>
+    <script src="js\my.js"></script>
+  </body>
+</html>
