@@ -1,7 +1,7 @@
 // title
 // Base title of pages.
 // Note: check encoding for the title using multi-bytes.
-title = "Gaiden"
+title = "Selenium"
 
 // The version of this document
 version = "0.1"
@@ -44,7 +44,7 @@ version = "0.1"
 // numbering
 // This parameter enables the numbering of the documentation.
 // default: true
-//numbering = true
+numbering = false
 
 // numberingOffset
 // This parameter represents the offset to start the numbering. A Header Level can be used in this setting. This parameter is based on 0.
